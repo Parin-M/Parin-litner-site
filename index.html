@@ -236,6 +236,26 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
 .release-buttons .btn-primary{box-shadow:0 16px 34px rgba(112,92,255,.30)}
 @media(max-width:800px){.release-shell{grid-template-columns:1fr;padding:28px}.release-visual{min-height:285px}.release-badge{display:none}}
 
+
+/* ===== RTL / Arabic / Hebrew stability layer ===== */
+html[dir="rtl"]{direction:rtl;overflow-x:hidden}
+html[dir="rtl"] body{direction:rtl;text-align:start;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;overflow-x:hidden}
+html[dir="rtl"] nav,html[dir="rtl"] .hero-grid,html[dir="rtl"] .showcase,html[dir="rtl"] .bento,html[dir="rtl"] .release-shell,html[dir="rtl"] .features,html[dir="rtl"] .stat-strip,html[dir="rtl"] .timeline,html[dir="rtl"] .phone-row{direction:rtl}
+html[dir="rtl"] .brand,html[dir="rtl"] .nav-links,html[dir="rtl"] .hero-cta,html[dir="rtl"] .hero-meta,html[dir="rtl"] .release-points,html[dir="rtl"] .release-buttons,html[dir="rtl"] .pills{direction:rtl}
+html[dir="rtl"] .nav-actions{direction:ltr}
+html[dir="rtl"] .nav-actions .lang{direction:ltr;text-align:left}
+html[dir="rtl"] .brand-mark{order:2}.brand>span:last-child{order:1}
+html[dir="rtl"] .float-badge.one{left:1%;right:auto}html[dir="rtl"] .float-badge.two{right:1%;left:auto}
+html[dir="rtl"] .release-badge.badge-a{left:4%;right:auto}html[dir="rtl"] .release-badge.badge-b{right:2%;left:auto}html[dir="rtl"] .release-badge.badge-c{left:9%;right:auto}
+html[dir="rtl"] .release-orbit:after{right:28px;left:auto}
+html[dir="rtl"] .mock-actions{direction:rtl}
+html[dir="rtl"] .marquee-track{animation-name:marqueeRtl}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] p,html[dir="rtl"] .lead{overflow-wrap:anywhere}
+html[dir="rtl"] [data-i18n],html[dir="rtl"] [data-i18n-fixed]{overflow-wrap:anywhere}
+html[dir="rtl"] .gradient{unicode-bidi:plaintext}
+@keyframes marqueeRtl{from{transform:translateX(50%)}to{transform:translateX(0)}}
+@media(max-width:800px){html[dir="rtl"] .release-shell{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -288,16 +308,16 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
       <div class="phone glass" id="phone">
         <div class="phone-screen">
           <div class="mock-top"><span>9:41</span><span>● ● ●</span></div>
-          <div class="mock-header"><div style="color:#667085;font-size:11px">Good morning</div><h3>Parin Litner</h3></div>
+          <div class="mock-header"><div style="color:#667085;font-size:11px"><span data-i18n-fixed="good_morning">Good morning</span></div><h3>Parin Litner</h3></div>
           <div class="mock-card">
             <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800"><span>Today's review</span><span>72%</span></div>
             <div class="progress" style="margin-top:10px"><span></span></div>
-            <div style="margin-top:18px;font-size:13px;color:#667085">Active deck</div>
+            <div style="margin-top:18px;font-size:13px;color:#667085"><span data-i18n-fixed="active_deck">Active deck</span></div>
             <div style="display:flex;justify-content:space-between;align-items:center;margin-top:5px"><strong>Language Lab</strong><span>42 cards</span></div>
           </div>
           <div class="mock-card">
-            <div style="font-size:12px;color:#667085">Quick study</div>
-            <div style="font-size:26px;font-weight:900;margin-top:8px">Ready when you are.</div>
+            <div style="font-size:12px;color:#667085"><span data-i18n-fixed="quick_study">Quick study</span></div>
+            <div style="font-size:26px;font-weight:900;margin-top:8px"><span data-i18n-fixed="ready">Ready when you are.</span></div>
             <div class="mock-actions"><div>⚡ Focus</div><div>⭐ Favorites</div><div>🔁 Due</div></div>
           </div>
           <div class="mock-nav"><span>⌂ Home</span><span>▤ Decks</span><span>◷ Stats</span><span>⚙ More</span></div>
@@ -354,7 +374,7 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
 <section id="experience">
 <div class="container">
   <div class="section-head reveal">
-    <span class="eyebrow">Interactive preview</span>
+    <span class="eyebrow"><span data-i18n-fixed="interactive_preview">Interactive preview</span></span>
     <h2 data-i18n="exp_title">Feel the card before you study it.</h2>
     <p class="lead" data-i18n="exp_lead">Move your mouse, flip the card and test the actions. The website mirrors Parin Litner's visual language.</p>
   </div>
@@ -362,14 +382,14 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
     <div class="panel glass demo-card reveal" id="demoCard">
       <div class="demo-card-inner">
         <div class="face front">
-          <div style="font-size:13px;color:#667085;font-weight:800">Language Lab • Box 2</div>
-          <h3>What is “serendipity”?</h3>
-          <p>Tap reveal to check the meaning.</p>
+          <div style="font-size:13px;color:#667085;font-weight:800"><span data-i18n-fixed="lab_box">Language Lab • Box 2</span></div>
+          <h3><span data-i18n-fixed="question">What is “serendipity”?</span></h3>
+          <p><span data-i18n-fixed="tap_reveal">Tap reveal to check the meaning.</span></p>
         </div>
         <div class="face back">
           <div style="font-size:13px;color:#667085;font-weight:800">Answer</div>
-          <h3>A fortunate discovery</h3>
-          <p>Something useful or pleasant found by chance.</p>
+          <h3><span data-i18n-fixed="answer_title">A fortunate discovery</span></h3>
+          <p><span data-i18n-fixed="answer_desc">Something useful or pleasant found by chance.</span></p>
         </div>
       </div>
       <div class="demo-controls">
@@ -382,14 +402,14 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
       <h3 style="font-size:28px;margin-top:0" data-i18n="study_title">A study session with more control</h3>
       <p class="lead" data-i18n="study_lead">Choose what to review, control the pace, keep a streak and return to difficult cards without losing your flow.</p>
       <div class="timeline">
-        <div class="t"><strong>01</strong><small>Choose deck</small></div>
+        <div class="t"><strong>01</strong><small><span data-i18n-fixed="choose_deck">Choose deck</span></small></div>
         <div class="t"><strong>02</strong><small>Review</small></div>
         <div class="t"><strong>03</strong><small>Rate</small></div>
         <div class="t"><strong>04</strong><small>Repeat</small></div>
       </div>
       <div class="pills">
-        <span class="pill">Auto reveal</span><span class="pill">Timer</span><span class="pill">Swipe gestures</span>
-        <span class="pill">Favorites</span><span class="pill">Daily goal</span><span class="pill">Haptics</span>
+        <span class="pill"><span data-i18n-fixed="auto_reveal">Auto reveal</span></span><span class="pill">Timer</span><span class="pill"><span data-i18n-fixed="swipe">Swipe gestures</span></span>
+        <span class="pill">Favorites</span><span class="pill"><span data-i18n-fixed="daily_goal">Daily goal</span></span><span class="pill"><span data-i18n-fixed="haptics">Haptics</span></span>
       </div>
     </div>
   </div>
@@ -399,7 +419,7 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
 <section id="themes">
 <div class="container">
   <div class="section-head reveal">
-    <span class="eyebrow">Twenty visual moods</span>
+    <span class="eyebrow"><span data-i18n-fixed="twenty_moods">Twenty visual moods</span></span>
     <h2 data-i18n="theme_title">One app. A different feeling every day.</h2>
     <p class="lead" data-i18n="theme_lead">The website previews the same idea as the app: color is adjustable, but the experience stays light, clean and focused.</p>
   </div>
@@ -410,8 +430,8 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
       <div style="position:absolute;right:-60px;bottom:-90px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(109,93,252,.28),transparent 65%)"></div>
     </div>
     <div class="bento-card glass reveal">
-      <h3>Color families</h3><p>Lavender, mint, ocean, rose, amber and more — 20 curated light modes built around a single visual system.</p>
-      <div class="pills"><span class="pill">Lavender</span><span class="pill">Ocean</span><span class="pill">Mint</span><span class="pill">Rose</span><span class="pill">Amber</span><span class="pill">Sky</span></div>
+      <h3><span data-i18n-fixed="color_families">Color families</span></h3><p><span data-i18n-fixed="lavender">Lavender</span>, mint, ocean, rose, amber and more — 20 curated light modes built around a single visual system.</p>
+      <div class="pills"><span class="pill"><span data-i18n-fixed="lavender">Lavender</span></span><span class="pill"><span data-i18n-fixed="ocean">Ocean</span></span><span class="pill"><span data-i18n-fixed="mint">Mint</span></span><span class="pill"><span data-i18n-fixed="rose">Rose</span></span><span class="pill"><span data-i18n-fixed="amber">Amber</span></span><span class="pill"><span data-i18n-fixed="sky">Sky</span></span></div>
     </div>
   </div>
   <div class="phone-row">
@@ -425,13 +445,13 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
 <section id="workflow">
 <div class="container">
   <div class="section-head reveal">
-    <span class="eyebrow">From first card to long-term memory</span>
+    <span class="eyebrow"><span data-i18n-fixed="from_first_card">From first card to long-term memory</span></span>
     <h2 data-i18n="how_title">Simple on day one. Powerful over time.</h2>
   </div>
   <div class="features">
-    <article class="feature glass reveal"><div class="icon">1</div><h3>Create</h3><p>Build a deck, add cards, attach images, tag favorites and organize your boxes.</p></article>
-    <article class="feature glass reveal"><div class="icon">2</div><h3>Review</h3><p>Open due cards or choose a custom study mode and use the flip-and-rate flow.</p></article>
-    <article class="feature glass reveal"><div class="icon">3</div><h3>Improve</h3><p>Let the Leitner system schedule repetition while stats and daily goals keep you consistent.</p></article>
+    <article class="feature glass reveal"><div class="icon">1</div><h3>Create</h3><p><span data-i18n-fixed="create_desc">Build a deck, add cards, attach images, tag favorites and organize your boxes.</span></p></article>
+    <article class="feature glass reveal"><div class="icon">2</div><h3>Review</h3><p><span data-i18n-fixed="review_desc">Open due cards or choose a custom study mode and use the flip-and-rate flow.</span></p></article>
+    <article class="feature glass reveal"><div class="icon">3</div><h3>Improve</h3><p><span data-i18n-fixed="improve_desc">Let the Leitner system schedule repetition while stats and daily goals keep you consistent.</span></p></article>
   </div>
 </div>
 </section>
@@ -444,7 +464,7 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
       <h2 style="font-size:clamp(38px,5vw,62px);margin:16px 0 10px" data-i18n="cta_title">Your next review starts here.</h2>
       <p class="lead" style="margin:0" data-i18n="cta_p">A calm place for cards, repetition, focus and progress.</p>
       <div class="release-points">
-        <span>✓ Android release</span><span>✓ Official GitHub release</span><span>✓ Parin Litner</span>
+        <span><span data-i18n-fixed="android_release">✓ Android release</span></span><span><span data-i18n-fixed="github_release">✓ Official GitHub release</span></span><span>✓ Parin Litner</span>
       </div>
       <div class="release-buttons">
         <a href="https://github.com/Parin-M/parin-litner/releases/tag/V6.1.0" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="cta_btn">Download V6.1.0</a>
@@ -454,9 +474,9 @@ rgba(255,255,255,.72);box-shadow:0 32px 90px rgba(42,55,102,.16)}
     <div class="release-visual">
       <div class="release-orbit"></div>
       <div class="release-logo glass"><img class="release-logo-img" alt="Parin Litner butterfly logo"></div>
-      <div class="release-badge badge-a glass">⚡ Fast study</div>
-      <div class="release-badge badge-b glass">🎧 Focus mode</div>
-      <div class="release-badge badge-c glass">🌍 Multilingual</div>
+      <div class="release-badge badge-a glass"><span data-i18n-fixed="fast_study">⚡ Fast study</span></div>
+      <div class="release-badge badge-b glass"><span data-i18n-fixed="focus_mode">🎧 Focus mode</span></div>
+      <div class="release-badge badge-c glass"><span data-i18n-fixed="multilingual">🌍 Multilingual</span></div>
     </div>
   </div>
 </div>
@@ -487,17 +507,31 @@ fi:{nav_features:"Ominaisuudet",nav_experience:"Kokemus",nav_themes:"Teemat",nav
 he:{nav_features:"תכונות",nav_experience:"חוויה",nav_themes:"ערכות",nav_workflow:"איך זה עובד",nav_download:"קבלו את Parin",hero1:"לומדים פחות.",hero2:"זוכרים יותר.",hero_p:"Parin Litner הופכת את שיטת Leitner לחוויית למידה רגועה וויזואלית עם ממשק זכוכית, כלים חזקים לכרטיסים, ארגון, סשנים ממוקדים וגיבויים.",explore:"לגלות את החוויה",discover:"לראות את כל התכונות",meta1:"20 ערכות עיצוב",meta2:"8 שפות ממשק",meta3:"ממוקד אופליין",features_title:"בנוי סביב הדרך שבה אתם באמת לומדים.",features_lead:"לכל חלק ב-Parin Litner יש מטרה ברורה – מהכרטיס הראשון ועד ייצוא הספרייה.",f1t:"חבילות ותיקיות",f1p:"צרו, שנו שמות, ארגנו ומחקו אזורי למידה.",f2t:"כרטיסים עוצמתיים",f2p:"הוסיפו, ערכו, מחקו, תייגו, סמנו כמועדפים וחפשו.",f3t:"תמונות בכרטיסים",f3p:"הוסיפו תמונות לצד הקדמי או האחורי.",f4t:"קופסאות Leitner",f4p:"העבירו כרטיסים בין שלבי חזרה עם תזמון מותאם.",f5t:"מוזיקת ריכוז",f5p:"נגנו מוזיקת Lo-fi ומיקוד רגועה.",f6t:"ייבוא וייצוא",f6p:"העבירו ספריות בין מכשירים בעזרת JSON.",f7t:"20 ערכות",f7p:"20 ערכות בהירות צבעוניות ועוד Pure Glass.",f8t:"ממשק רב-לשוני",f8p:"תמיכת RTL ומערכת לוקליזציה ניתנת להרחבה.",f9t:"אנימציות נעימות",f9p:"אינטראקציות קטנות, סיבוב כרטיס, עומק עכבר וחשיפה בגלילה.",exp_title:"הרגישו את הכרטיס לפני הלמידה.",exp_lead:"הזיזו את העכבר, הפכו את הכרטיס ונסו את הכפתורים.",study_title:"סשן למידה עם יותר שליטה",study_lead:"בחרו מה לחזור עליו, שלטו בקצב וחזרו לכרטיסים קשים.",theme_title:"אפליקציה אחת. תחושה אחרת בכל יום.",theme_lead:"הצבעים משתנים, אך החוויה נשארת בהירה וממוקדת.",how_title:"פשוט ביום הראשון. חזק לאורך זמן.",cta_title:"החזרה הבאה מתחילה כאן.",cta_p:"מקום רגוע לכרטיסים, חזרה, ריכוז והתקדמות.",cta_btn:"הורדת V6.1.0",release_more:"לצפייה בתכונות",footer:"למדו יפה. זכרו לזמן רב יותר."}
 };
 
+const fixedRtlTranslations={"fa": {"good_morning": "صبح بخیر", "active_deck": "دسته فعال", "quick_study": "مطالعه سریع", "ready": "هر وقت آماده‌ای.", "focus": "⚡ تمرکز", "favorites": "⭐ علاقه‌مندی‌ها", "due": "🔁 آماده مرور", "home": "⌂ خانه", "decks": "▤ دسته‌ها", "stats": "◷ آمار", "more": "⚙ بیشتر", "answer": "پاسخ", "reveal_answer": "↻ نمایش پاسخ", "again": "😣 دوباره", "hard": "😐 سخت", "good": "🙂 خوب", "easy": "😎 آسان", "review": "مرور", "rate": "امتیازدهی", "repeat": "تکرار", "timer": "تایمر", "interactive_preview": "پیش‌نمایش تعاملی", "lab_box": "آزمایش زبان • خانه ۲", "question": "«serendipity» یعنی چه؟", "tap_reveal": "برای دیدن پاسخ، کارت را برگردان.", "answer_title": "یک کشف خوشایند و اتفاقی", "answer_desc": "چیزی مفید یا خوشایند که به‌صورت تصادفی پیدا می‌شود.", "choose_deck": "انتخاب دسته", "auto_reveal": "نمایش خودکار", "swipe": "حرکت دست", "daily_goal": "هدف روزانه", "haptics": "بازخورد لمسی", "twenty_moods": "۲۰ حال‌وهوای بصری", "color_families": "خانواده‌های رنگی", "lavender": "اسطوخودوسی", "ocean": "اقیانوسی", "mint": "نعنایی", "rose": "رز", "amber": "کهربایی", "sky": "آسمانی", "from_first_card": "از اولین کارت تا حافظه بلندمدت", "create_desc": "یک دسته بساز، کارت اضافه کن، تصویر ضمیمه کن، موارد دلخواه را علامت بزن و خانه‌ها را سازمان‌دهی کن.", "review_desc": "کارت‌های آماده مرور را باز کن یا حالت مطالعه دلخواهت را انتخاب کن.", "improve_desc": "سیستم لایتنر زمان‌بندی مرور را انجام می‌دهد و آمار و اهداف روزانه به استمرار کمک می‌کنند.", "android_release": "✓ نسخه اندروید", "github_release": "✓ انتشار رسمی GitHub", "fast_study": "⚡ مطالعه سریع", "focus_mode": "🎧 حالت تمرکز", "multilingual": "🌍 چندزبانه"}, "ar": {"good_morning": "صباح الخير", "active_deck": "المجموعة النشطة", "quick_study": "دراسة سريعة", "ready": "جاهز عندما تكون.", "focus": "⚡ تركيز", "favorites": "⭐ المفضلة", "due": "🔁 مستحق للمراجعة", "home": "⌂ الرئيسية", "decks": "▤ المجموعات", "stats": "◷ الإحصائيات", "more": "⚙ المزيد", "answer": "الإجابة", "reveal_answer": "↻ إظهار الإجابة", "again": "😣 مرة أخرى", "hard": "😐 صعب", "good": "🙂 جيد", "easy": "😎 سهل", "review": "مراجعة", "rate": "تقييم", "repeat": "تكرار", "timer": "مؤقت", "interactive_preview": "معاينة تفاعلية", "lab_box": "مختبر اللغة • الصندوق ٢", "question": "ما معنى «serendipity»؟", "tap_reveal": "اقلب البطاقة لرؤية الإجابة.", "answer_title": "اكتشاف سعيد بالصدفة", "answer_desc": "شيء مفيد أو ممتع تم العثور عليه بالصدفة.", "choose_deck": "اختيار المجموعة", "auto_reveal": "كشف تلقائي", "swipe": "إيماءات السحب", "daily_goal": "الهدف اليومي", "haptics": "اهتزازات لمسية", "twenty_moods": "٢٠ حالة بصرية", "color_families": "عائلات الألوان", "lavender": "لافندر", "ocean": "محيطي", "mint": "نعناعي", "rose": "وردي", "amber": "كهرماني", "sky": "سماوي", "from_first_card": "من أول بطاقة إلى الذاكرة طويلة المدى", "create_desc": "أنشئ مجموعة وأضف البطاقات والصور وضع العلامات ونظّم الصناديق.", "review_desc": "افتح البطاقات المستحقة أو اختر وضع الدراسة الذي تفضله.", "improve_desc": "يتولى نظام Leitner جدولة التكرار بينما تساعد الإحصائيات والأهداف اليومية على الاستمرار.", "android_release": "✓ إصدار Android", "github_release": "✓ إصدار GitHub الرسمي", "fast_study": "⚡ دراسة سريعة", "focus_mode": "🎧 وضع التركيز", "multilingual": "🌍 متعدد اللغات"}, "he": {"good_morning": "בוקר טוב", "active_deck": "החבילה הפעילה", "quick_study": "לימוד מהיר", "ready": "מוכן כשאתה.", "focus": "⚡ ריכוז", "favorites": "⭐ מועדפים", "due": "🔁 לתרגול", "home": "⌂ בית", "decks": "▤ חבילות", "stats": "◷ סטטיסטיקה", "more": "⚙ עוד", "answer": "תשובה", "reveal_answer": "↻ הצג תשובה", "again": "😣 שוב", "hard": "😐 קשה", "good": "🙂 טוב", "easy": "😎 קל", "review": "תרגול", "rate": "דירוג", "repeat": "חזרה", "timer": "טיימר", "interactive_preview": "תצוגה אינטראקטיבית", "lab_box": "מעבדת שפות • תיבה 2", "question": "מה פירוש “serendipity”?", "tap_reveal": "הפוך את הכרטיס כדי לראות את התשובה.", "answer_title": "גילוי מוצלח במקרה", "answer_desc": "משהו שימושי או נעים שנמצא במקרה.", "choose_deck": "בחירת חבילה", "auto_reveal": "חשיפה אוטומטית", "swipe": "מחוות החלקה", "daily_goal": "יעד יומי", "haptics": "משוב מישושי", "twenty_moods": "20 אווירות ויזואליות", "color_families": "משפחות צבעים", "lavender": "לבנדר", "ocean": "אוקיינוס", "mint": "מנטה", "rose": "ורוד", "amber": "ענבר", "sky": "שמיים", "from_first_card": "מהכרטיס הראשון לזיכרון לטווח ארוך", "create_desc": "צור חבילה, הוסף כרטיסים ותמונות, סמן מועדפים וארגן את התיבות.", "review_desc": "פתח כרטיסים שממתינים לתרגול או בחר מצב לימוד מותאם אישית.", "improve_desc": "מערכת Leitner מתזמנת את החזרות, והסטטיסטיקה והיעדים היומיים עוזרים להתמיד.", "android_release": "✓ גרסת Android", "github_release": "✓ שחרור GitHub רשמי", "fast_study": "⚡ לימוד מהיר", "focus_mode": "🎧 מצב ריכוז", "multilingual": "🌍 רב-לשוני"}};
 const langSelect=document.getElementById('languageSelect');
 function applyLang(lang){
   const t=translations[lang]||translations.en;
+  const fixed=fixedRtlTranslations[lang]||{};
+  const rtl=['fa','ar','he'].includes(lang);
   document.documentElement.lang=lang;
-  document.documentElement.dir=(['fa','ar','he'].includes(lang)?'rtl':'ltr');
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key=el.dataset.i18n;
-    if(t[key]!==undefined) el.textContent=t[key];
-  });
+  document.documentElement.dir=rtl?'rtl':'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(t[key]!==undefined)el.textContent=t[key];});
+  document.querySelectorAll('[data-i18n-fixed]').forEach(el=>{if(!el.dataset.i18nOriginal)el.dataset.i18nOriginal=el.textContent;el.textContent=fixed[el.dataset.i18nFixed]??el.dataset.i18nOriginal;});
+  const flip=document.getElementById('flipBtn');
+  const demoCardEl=document.getElementById('demoCard');
+  if(flip){
+    const labels={
+      en:['↺ Show question','↻ Reveal answer'],
+      fa:['↺ نمایش سؤال','↻ نمایش پاسخ'],
+      ar:['↺ إظهار السؤال','↻ إظهار الإجابة'],
+      he:['↺ הצג שאלה','↻ הצג תשובה']
+    }[lang]||['↺ Show question','↻ Reveal answer'];
+    flip.textContent=demoCardEl && demoCardEl.classList.contains('flipped')?labels[0]:labels[1];
+  }
+  document.title=lang==='fa'?'Parin Litner — یادگیری هوشمند':lang==='ar'?'Parin Litner — تعلّم بذكاء':lang==='he'?'Parin Litner — לומדים חכם':'Parin Litner — Learn Smarter';
   try{localStorage.setItem('parin_site_lang',lang)}catch(e){}
 }
+document.querySelectorAll('[data-i18n-fixed]').forEach(el=>{if(!el.dataset.i18nOriginal)el.dataset.i18nOriginal=el.textContent;});
 const saved=(()=>{try{return localStorage.getItem('parin_site_lang')}catch(e){return null}})();
 langSelect.value=saved&&translations[saved]?saved:'en';
 applyLang(langSelect.value);
